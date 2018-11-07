@@ -1,28 +1,13 @@
-# Sample Application for "Introduction to ML with Apache Spark MLlib" Presentation
-
-## Presentation
-Link to the presentation: http://www.slideshare.net/tmatyashovsky/introduction-to-ml-with-apache-spark-mllib
+# Sample Application for "Testing Apache Spark MLlib with Java & benchmarking it with python"
 
 ## Idea
 Create few examples to demonstrate regression, classification and clustering to Java developers.
 Main focus is on feature extraction and creation of interesting ML pipelines. 
 
-### DOU Dataset
-DOU (http://dou.ua) stands for developers.org.ua is a main hub for Ukrainian developers.
-It provides anonymous survey for getting information about Ukrainian engineers, their salary, experience, English level, etc. 
-
-#### DOU Dataset Regression
-Given poll results predict salary based on experience, English level and programming language.
-
 Nuances:
 * English level is string, should be converted to numeric, e.g. 0…5
 * Languages are strings, should be exploded to 18 booleans, e.g. java=0|1, python=0|1, etc.
 * Sparse vector [21, [0, 1, 13], [3, 4, 1]] is more preferable
-
-#### DOU Dataset Clustering
-Given poll results predict level (junior, middle, senior) based on experience and English level.
-
-Nuances:
 * English level is string, should be converted to numeric, e.g. 0…5
 * 1$ difference in salary is not as significant as 1 year of experience, so data should be scaled before clustering
 * Dense vector is ok  
